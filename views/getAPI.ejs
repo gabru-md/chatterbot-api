@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ChatterBot Web API Key</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta charset="utf-8">
+    <!--Importing Bootstrap and jQuery from googleAPIs and bootstrapCDN-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS Sheets incoming! -->
+    <style media="screen">
+
+    .topcorner{
+      position:absolute;
+      top:0;
+      right:0;
+    }   
+    .form_div{
+        margin:0 auto;
+        width: 67;
+    }
+    </style>
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <div class="rows">
+        <div class="col-sm-12" style="text-align:center">
+          <p>
+            <a href="javascript:void(0)"><img height="200" src="chatterbot.png" alt="Chatterbot" align="center"></a>
+            <span style="font-size:12px" class="topcorner">Hi <%= name %>, <a style="text-decoration:none" href="/logout">Logout</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="rows">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8 text-center">
+          <form action="/getAPI" method="POST">
+            <div class="input-group  form_div">
+                <input type="text" class="form-control" value="<%= apikey %>" readonly="readonly">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" <%= disabled %> >Generate API Key</button>
+          </form>
+          <br><br>
+        <div class="col-sm-12" style="color:red">
+            *Never share your API key.
+        </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        <br><br>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "chatterbot-api",
+  "version": "1.0.0",
+  "description": "API for chatterbot-Python",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.11.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0",
+    "serve-favicon": "^2.4.3",
+    "shortid": "^2.2.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabru-md/chatterbot-api.git"
+  },
+  "author": "Manish Devgan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gabru-md/chatterbot-api/issues"
+  },
+  "homepage": "https://github.com/gabru-md/chatterbot-api#readme"
+}

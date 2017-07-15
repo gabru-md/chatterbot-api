@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ChatterBot Web API Key</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta charset="utf-8">
+    <!--Importing Bootstrap and jQuery from googleAPIs and bootstrapCDN-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS Sheets incoming! -->
+    <style media="screen">
+
+    .topcorner{
+      position:absolute;
+      top:0;
+      right:0;
+    }   
+    .form_div{
+        margin:0 auto;
+        width: 67;
+    }
+    .footer{
+        background-color: #24292e;
+        color:white;
+        padding-top:5px;
+        padding-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <div class="rows">
+        <div class="col-sm-12" style="text-align:center">
+          <p>
+            <a href="/"><img height="200" src="chatterbot.png" alt="Chatterbot" align="center"></a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="rows">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+          <p>Go to:</p>
+          <div class="alert alert-info" role="alert">
+          https://localhost:8900/getResponse/{{ API-Token }}/{{ message }}
+          </div>
+          <p>API-Token: Your API-Key that you can generate <a style="color:blue" href="/getAPI">here</a>.</p>
+          <p>message: The message to generate response for.</p>
+          <p>It will result in a JSON object with your response.</p>
+          <div class="alert alert-info" role="alert">
+            {<br>
+              _id : ID_OF_USER,<br>
+              username : YOUR_USER_NAME,<br>
+              apitoken : YOUR_API_TOKEN,<br>
+              query : YOUR_QUERY_OR_MESSAGE,<br>
+              response : RESPOSE_FOR_QUERY<br>
+            }
+          </div>
+          <p>This JSON Object can then be used for expanding ChatterBot's usage among different platforms.</p>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        <h3><br><br></h3>
+      </div>
+    </div>
+    <div class="container-fluid text-center footer">
+      Copyright &copy Manish Devgan 2017
+    </div>
+  </body>
+</html>
