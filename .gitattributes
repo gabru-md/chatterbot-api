@@ -1,2 +1,2 @@
-*.html linguist-vendored
-*.ejs linguist-vendored
+html/*.html linguist-vendored
+views/*.ejs linguist-vendored
