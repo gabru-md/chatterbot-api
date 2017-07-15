@@ -68,8 +68,8 @@ app.get('/getResponse/:apikey/:query',function(req,res){
           var userName = resp[0]['username'];
           var id = resp[0]['_id'];
           var token = api;
-
-          exec('/home/gabru-md/chatterbot-api/chatbot.py',[userName,token,message],(error,stdout,stderr)=>{
+          var args = " " + userName + " " + token + " " + '"' + message + '"'
+          exec("python /home/gabru-md/chatterbot-api/chatbot.py" + args,(error,stdout,stderr)=>{
             if(error){
               console.log(error);
               return;
@@ -87,17 +87,17 @@ app.get('/getResponse/:apikey/:query',function(req,res){
                 if(err){
                   console.log(err);
                 }
-                else{
+                else if(Res.length){
                   responseBot = Res[0]['response'];
-              var responseObj = {
-                _id : id,
-                username : userName,
-                apitoken : token,
-                query : message,
-                response : responseBot
-              }
-              res.json(responseObj);
-              res.end();
+                  var responseObj = {
+                    _id : id,
+                    username : userName,
+                    apitoken : token,
+                    query : message,
+                    response : responseBot
+                  }
+                  res.json(responseObj);
+                  res.end();
                 }
               });  
 
@@ -117,7 +117,6 @@ app.get('/getResponse/:apikey/:query',function(req,res){
 
 // getAPI GET
 app.get("/getAPI",isLoggedIn,function(req,res){
-  //res.writeHead(200,{'Content-Type':'text/html'});
   MongoClient.connect(url_apiDatabase,function(err,db){
     if(err){
       console.log(err);
@@ -143,7 +142,6 @@ app.get("/getAPI",isLoggedIn,function(req,res){
     }
     db.close();
   });
-  //res.render('getAPI',{name: req.user.name , apikey: "", disabled : "disabled"});
 });
 
 // getAPI POST
@@ -267,5 +265,5 @@ app.get('/:error',function(req,res){
 });
 
 
-console.log('Crawling on : 8900');
+console.log('Chatting on : 8900');
 app.listen(8900);

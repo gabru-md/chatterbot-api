@@ -36,4 +36,5 @@ obj = {
 }
 
 collection.insert_one(obj)
+
 print("Inserted")
