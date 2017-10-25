@@ -52,3 +52,6 @@ Navigate to : `https://localhost:8900/howtouse`
 
 ## Author 
 [gabru-md](https://github.com/gabru-md) <3
+
+## Liscence
+GPL-3.0
