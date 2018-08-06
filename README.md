@@ -53,5 +53,5 @@ Navigate to : `https://localhost:8900/howtouse`
 ## Author 
 [gabru-md](https://github.com/gabru-md) <3
 
-## Liscence
-GPL-3.0
+## License
+[GNU General Public License v3.0](https://github.com/gabru-md/chatterbot-api/blob/master/LICENSE)
